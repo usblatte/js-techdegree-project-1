@@ -15,29 +15,29 @@ const quotes = [
     source: 'Mrs. Crosby',
     citation: "The Potter's School",
     year: '2019',
-    tags: 'funny',
+    tags: 'funny'
   },
   {
     quote: "I pray that Mrs. Crosby won’t croak while grading it.",
     source: 'Annabella Chow',
     year: '2019',
-    tags: 'funny',
+    tags: 'funny'
   },
   {
     quote: "I've missed more than 9000 shots in my career. I've lost almost 300 games. 26 times I've been trusted to take the game winning shot and missed. I've failed over and over and over again in my life. And that is why I succeed.",
     source: 'Michael Jordan',
     citation: ' "Failure" Nike Commercial ',
     year: '2006',
-    tags: 'failure',
+    tags: 'failure'
   },
   {
     quote: 'The most difficult thing is the decision to act, the rest is merely tenacity.',
     source: 'Amelia Earhart',
-    tags: 'inspirational',
+    tags: 'inspirational'
   },
   {
     quote: 'Life is what happens to you while you’re busy making other plans. ',
-    source: 'John Lennon',
+    source: 'John Lennon'
   },
 ];
 
