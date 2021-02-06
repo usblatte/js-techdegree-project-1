@@ -37,7 +37,8 @@ const quotes = [
   },
   {
     quote: 'Life is what happens to you while you’re busy making other plans. ',
-    source: 'John Lennon'
+    source: 'John Lennon',
+    tags: 'motivational'
   },
 ];
 
@@ -59,7 +60,7 @@ function printQuote() {
   const year = randomQuote.hasOwnProperty('year') ? randomQuote.year : '';
   const tags = randomQuote.hasOwnProperty('tags') ? randomQuote.tags : '';
   
-  html = `
+  let html = `
   <p class="quote">${randomQuote.quote}</p>
   <p class="source">${randomQuote.source}
     <span class="citation">${citation}</span>
@@ -68,6 +69,15 @@ function printQuote() {
   </p>
   `;
   document.getElementById('quote-box').innerHTML = html;
+  //random background color setter
+  const colors = [
+    '#064A89',
+    '#008000',
+    '#FF7373',
+    '#c3beff',
+    '#101033'
+  ];
+  document.querySelector('body').style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
 }
 
 //setInterval prints a new random quote every 5 seconds
