@@ -60,6 +60,10 @@ const quotes = [
  * `getRandomQuote` function
 ***/
 
+function getRandomQuote() {
+  const rando = Math.floor(Math.random() * quotes.length);
+  return quotes[rando];
+}
 
 /***
  * `printQuote` function
