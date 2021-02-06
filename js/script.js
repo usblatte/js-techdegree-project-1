@@ -69,7 +69,22 @@ function getRandomQuote() {
  * `printQuote` function
 ***/
 
-
+function printQuote() {
+  const randomQuote = getRandomQuote();
+  const citation = randomQuote.hasOwnProperty('citation') ? randomQuote.citation : '';
+  const year = randomQuote.hasOwnProperty('year') ? randomQuote.year : '';
+  const tags = randomQuote.hasOwnProperty('tags') ? randomQuote.tags : '';
+  
+  html = `
+  <p class="quote">${randomQuote.quote}</p>
+  <p class="source">${randomQuote.source}
+    <span class="citation">${citation}</span>
+    <span class="year">${year}</span>
+    <span class="tags">${tags}</span>
+  </p>
+`;
+  document.getElementById('quote-box').innerHTML = html;
+}
 
 /***
  * click event listener for the print quote button
