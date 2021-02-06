@@ -46,8 +46,7 @@ const quotes = [
 //index of the quotes array
 
 function getRandomQuote() {
-  const rando = Math.floor(Math.random() * quotes.length);
-  return quotes[rando];
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 //printQuote function changes the innerHTML of quote-box to the
@@ -71,8 +70,8 @@ function printQuote() {
   document.getElementById('quote-box').innerHTML = html;
 }
 
-//setInterval prints a new random quote every 10 seconds
-setInterval(printQuote, 10000);
+//setInterval prints a new random quote every 5 seconds
+setInterval(printQuote, 5000);
 
 /***
  * click event listener for the print quote button
