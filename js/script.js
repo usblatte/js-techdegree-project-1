@@ -63,11 +63,12 @@ function printQuote() {
   let html = `
   <p class="quote">${randomQuote.quote}</p>
   <p class="source">${randomQuote.source}
-    <span class="citation">${citation}</span>
-    <span class="year">${year}</span>
-    <span class="tags">${tags}</span>
-  </p>
   `;
+  html += randomQuote.hasOwnProperty('citation') ? `<span class="citation">${citation}</span>` : '';
+  html += randomQuote.hasOwnProperty('year') ? `<span class="year">${year}</span>` : '';
+  html += randomQuote.hasOwnProperty('tags') ? `<span class="tags">${tags}</span>` : '';
+  html += `</p>`;
+  
   document.getElementById('quote-box').innerHTML = html;
   //random background color setter
   const colors = [
